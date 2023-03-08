@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b151cc4159.js" crossorigin="anonymous"></script>
+    <title>عصير الكتب - اكبر مكتبة الكترونية لشراء وتحميل الكتب</title>
+    <link rel="icon" type="image" href="logo-40x40.png">
+    <style>
+        .navbar {
+            top: 3px;
+            padding-left: 14px;
+            height: 51px;
+        }
+
+        .nav-item {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        #navinput {
+            height: 25px;
+            font-size: 10px;
+            width: 224px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-color: rgb(228, 228, 228);
+            border-width: .5px;
+        }
+
+        #navinput:hover {
+            border-color: rgb(211, 3, 3);
+        }
+
+        #slide {
+            height: 500px;
+            background-color: rgb(87, 72, 95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .btn1 {
+            background-color: rgb(92, 49, 57);
+            color: rgb(236, 154, 167);
+            font-size: 11px;
+            font-weight: 500;
+            padding: 10px 50px;
+            border-radius: 7px;
+        }
+
+        .btn2 {
+
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 7px;
+            border: 1px solid rgba(223, 223, 223, 0.5);
+            font-weight: 500;
+            height: 50px;
+        }
+
+        .btn2:hover {
+            background-color: white;
+            color: black;
+            border: 1px solid rgba(223, 223, 223, 0.5);
+
+        }
+
+        .btn-group {
+            margin-bottom: 80px;
+        }
+
+        .fa-star {
+            color: rgb(235, 235, 235);
+        }
+        .star1 {
+            color: rgb( 243, 209, 14);
+        }
+
+        .col-12 {
+            margin: 0;
+        }
+
+        .col-2 {
+            padding: 0 2px;
+        }
+
+        .card-group {
+            margin: 0;
+            padding: 0;
+        }
+
+        .card-group img {
+            border-radius: 80%;
+        }
+
+        .text-uppercase {
+            font-size: 13px;
+            color: rgb(131, 129, 129);
+            font-weight: 500;
+        }
+
+        .text {
+            padding: 50px 0;
+            font-size: 12px;
+            color: rgb(184, 184, 184);
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .text1{
+            color: rgb(184, 184, 184);
+            font-size: 18px;
+        }
+        .text:hover , .text1:hover {
+            color: rgb(231, 230, 230);
+        }
+    </style>
+</head>
+
+<body style=" background-color: rgb(240, 247, 245);">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container-fluid"
+            style="height:5px;border-width:0;background-color:darkred;position:fixed;top: 0;right: 0;left: 0;">
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-truck" style="color: rgb(58, 168, 150) ;"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-cart-shopping"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">تسجيل</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">دخول</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-arrow-up" style="color:rgb(64, 219, 193) ;"></i>
+                            انشر معنا </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-puzzle-piece"
+                                style="color:rgb(83, 117, 228) ;"></i> العاب </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-sharp fa-solid fa-heart"
+                                style="color:rgb(245, 107, 107) ;"></i> تهادوا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">المؤلفين</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الاقسام</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">منتجات اطفال</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الكتب</a>
+                    </li>
+                </ul>
+                <div class="input-group" style="width: 270px;">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1"
+                        style="background-color:rgb(165, 20, 69) ;color: white;height: 25px;display: flex;">
+                        <i class="fa-solid fa-magnifying-glass"
+                            style="font-size:11px; justify-items: center;"></i></button>
+                    <input type="text" id="navinput"
+                        placeholder="                     ...اسم الكتاب اوالمؤلف او دار النشر"
+                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                </div>
+                <a class="nav-link" href="#" style="font-size: 18px;font-weight: 500;color:rgb(63, 63, 63);"> عصير الكتب
+                    <img src="logo-40x40.png" alt="Avatar Logo" style="width:25px;">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center align-items-center" id="slide">
+        <div class="container ">
+            <div class="col " style="margin-top: 180px;">
+                <p class="h1"
+                    style="color: white;font-size:45px;font-weight: 500; text-shadow: 1px 4px rgb(63, 59, 59);margin-bottom: 55px;">
+                    عصير
+                    الكتب</p>
+
+                <div class="input-group align-self-center"
+                    style="width: 630px;margin: auto;height: 50px;margin-bottom: 55px;border: none;">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1"
+                        style="background-color:rgb(190, 15, 53) ;color: white;width: 60px;border: none;">
+                        <i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" class="form-control" style="font-size:12px;border: none;" placeholder="                                                                 
+                                          ...ابحث عن كتاب او مؤلف او دار النشر"
+                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                </div>
+
+                <button type="button" class="btn btn1"> كتب مسموعة </button>
+                <button type="button" class="btn  btn1">كتب للقراءة مجانا</button>
+                <button type="button" class="btn btn1"> كتب ورقية للشراء </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-group container-fluid" role="group" aria-label="First group">
+        <button type="button" class="btn btn2 btn-outline-secondary">
+            <img src="651.jpg" alt="Avatar Logo" style="width: 18px;height:19px;opacity: 0.7;"> صفقة اليوم </button>
+        <button type="button" class="btn btn2 btn-outline-secondary">
+            <img src="fire.jpg" alt="Avatar Logo" style="width: 30px;height:30px;"> الاكثر رواجا اليوم</button>
+        <button type="button" class="btn btn2 btn-outline-secondary">
+            <img src="22.png" alt="Avatar Logo" style="width: 25px;height:25px;"> صدر حديثا </button>
+    </div>
+
+    <p style="float:right;font-size:20px;font-weight:500;color: rgb(112, 111, 111);"> أحدث الإصدارات <i
+            class="fa-sharp fa-solid fa-less-than" style="color: rgb(28, 240, 169);"></i></p>
+
+    <div class="container-fluid text-center">
+        <div class="row col-12">
+            <div class="col-2">
+                <div class="card">
+                    <img src="1.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i>
+                            <h6 class="card-title  text-truncate"> وراء عينيها</h6>
+                        <p class="card-text">سارا بينبرو</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="2.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> اعرف وجهك الاخر  </h6>
+                        <p class="card-text"> يوسف الحسنى  </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="3.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> المثابر  </h6>
+                        <p class="card-text"> تيم س. غروفر  </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="4.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate">  المخ الابله  </6>
+                        <p class="card-text">  دين برنيت   </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="5.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate">  اولاد حارتنا  </h6>
+                        <p class="card-text"> نجيب محفوظ  </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="card">
+                    <img src="6.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star "></i>
+                            <h6 class="card-title  text-truncate"> مناورة الملكة </h6>
+                        <p class="card-text"> والتر تيفيس </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p style="float:right;font-size:20px;font-weight:500;color: rgb(112, 111, 111);margin-top: 40px;"> الأكثر رواجًا <i
+            class="fa-sharp fa-solid fa-less-than" style="color: rgb(28, 240, 169);"></i></p>
+
+    <div class="container-fluid text-center">
+        <div class="row col-12">
+            <div class="col-2">
+                <div class="card">
+                    <img src="7.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> نظرية الطيران </h6>
+                        <p class="card-text"> جلوريا اندلوفو </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="8.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i>
+                            <h6 class="card-title  text-truncate"> كشكول المجهود الشخصى </h6>
+                        <p class="card-text"> منى رضوان</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="9.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> كيف تربين فتاة واثقة من نفسها </h6>
+                        <p class="card-text">  ياسمين المهدى </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="10.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> محاط بالمرضى النفسيين </h6>
+                        <p class="card-text"> طوماس اريكسون </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="11.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> الاعمال الكاملة </h6>
+                        <p class="card-text  text-truncate"> رياض الصالح الحسين </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="card">
+                    <img src="12.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> سر الغرفة 207</h6>
+                        <p class="card-text">  احمد خالد توفيق </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p style="float:right;font-size:20px;font-weight:500;color: rgb(112, 111, 111);margin-top: 40px;"> أضيف حديثًا <i
+            class="fa-sharp fa-solid fa-less-than" style="color: rgb(28, 240, 169);"></i></p>
+
+    <div class="container-fluid text-center">
+        <div class="row col-12 ">
+            <div class="col-2">
+                <div class="card">
+                    <img src="13.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> حائط غاندى </h6>
+                        <p class="card-text"> عزة رشاد </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="14.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> انا وانت </h6>
+                        <p class="card-text"> احمد الخميسى  </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="15.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i>
+                            <h6 class="card-title  text-truncate"> خريف المحروسة </h6>
+                        <p class="card-text"> محمد كامل</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="16.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> فى بلاط الخليفة </h6>
+                        <p class="card-text"> محمد ابراهيم</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="17.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> مجموعة قصصية</h6>
+                        <p class="card-text"> عمرو العادلى</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="card">
+                    <img src="18.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate">الظلام عند اطراف المدينة</h6>
+                        <p class="card-text"> ادم كريستوفر</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p style="float:right;font-size:20px;font-weight:500;color: rgb(112, 111, 111);margin-top: 40px;"> قصص الأطفال<i
+            class="fa-sharp fa-solid fa-less-than" style="color: rgb(28, 240, 169);"></i></p>
+
+    <div class="container-fluid text-center">
+        <div class="row col-12">
+            <div class="col-2">
+                <div class="card">
+                    <img src="19.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> التناقضات  </h6>
+                        <p class="card-text">  فروزن</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="20.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> القضية الكبرى</h6>
+                        <p class="card-text"> زوتوبيا</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="21.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i>
+                            <h6 class="card-title  text-truncate">  دبدوب فى الطريق   </h6>
+                        <p class="card-text">مغامرات دبدوب </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="22.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> هل تشعرين يا ميمو</h6>
+                        <p class="card-text"> روسيو بونيو</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="23.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> معا نستطيع </h6>
+                        <p class="card-text">  مى محمد</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="card">
+                    <img src="24.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate">سأحكى له عنك    </h6>
+                        <p class="card-text"> يافيس نادين</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="float:right;font-size:20px;font-weight:500;color: rgb(112, 111, 111);margin-top: 40px;"> كتب اجنبية<i
+            class="fa-sharp fa-solid fa-less-than" style="color: rgb(28, 240, 169);"></i></p>
+
+    <div class="container-fluid text-center">
+        <div class="row col-12">
+            <div class="col-2">
+                <div class="card">
+                    <img src="25.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                        <h6 class="card-title  text-truncate">The Power of Thinking Without Thinking </h6>
+                        <p class="card-text"> Malcolm Gladwell</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="26.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> How To Bocome A Great Boss</h6>
+                        <p class="card-text">Jeffrey J.Fox </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="27.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate">Good To Great </h6>
+                        <p class="card-text"> Jim Collins</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="28.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate"> The Alchemist</h6>
+                        <p class="card-text">Paulo Coelho </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="card">
+                    <img src="29.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                            <h6 class="card-title  text-truncate">The 3 Things That Will Change Your Destiny </h6>
+                        <p class="card-text">Paul Mckenna </p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="card">
+                    <img src="30.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <i class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                          class="fa-solid fa-star star1"></i><i class="fa-solid fa-star star1"></i><i
+                          class="fa-solid fa-star star1"></i>
+                      <h6 class="card-title  text-truncate">Guide To Investment Strategy</h6>
+                        <p class="card-text">Peter Stawyer</p>
+                    </div>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item "><a href="#"><img src="cart.png" alt="Avatar Logo"
+                                    style="width: 60px;height:25px;"></a>
+                            <span class="text-decoration-line-through" style="color:darkred;"> ١٢٠٫٠٠ ج.م.‏</span>
+                            <span> ١٠٨٫٠٠ ج.م.‏ </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p style="float:right;font-size:20px;font-weight:500;color: rgb(112, 111, 111);margin-top: 40px;"> دور النشر الأكثر
+        مبيعاً<i class="fa-sharp fa-solid fa-less-than" style="color: rgb(28, 240, 169);"></i></p><br>
+
+
+    <div class="container-fluid " style="margin-top:40px ;margin-bottom: 20px;">
+        <div class="card-group col-12 text-center" style="border-radius: 15px;margin: 20px 0px;">
+            <div class="card ">
+                <img src="38.webp" style="width: 100%;height: 90px;border-radius: 100%;" class="card-img" alt="...">
+            </div>
+            <div class="card">
+                <img src="37.webp" style="width: 100%;height: 90px;border-radius: 100%;" class="card-img" alt="...">
+            </div>
+            <div class="card">
+                <img src="36.webp" style="width: 100%;height: 90px;border-radius: 100%;" class="card-img" alt="...">
+            </div>
+            <div class="card">
+                <img src="35.webp" style="width: 100%;height: 90px;border-radius: 100%;" class="card-img" alt="...">
+            </div>
+            <div class="card">
+                <img src="34.webp" style="width: 100%;height: 90px;border-radius: 100%;" class="card-img" alt="...">
+            </div>
+            <div class="card">
+                <img src="33.webp" style="width: 100%;height: 90px;border-radius: 100%;" class="card-img" alt="...">
+            </div>
+            <div class="card">
+                <img src="32.webp" style="width: 100%;height: 90px;border-radius: 100%;" class="card-img" alt="...">
+            </div>
+            <div class="card">
+                <img src="31.webp" style="width: 100%;height: 90px;border-radius: 100%;" class="card-img" alt="...">
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <footer class=" text-start"
+        style="background-color:rgba(27, 38, 53, 0.979);height: 340px;color: rgb(104, 105, 112);">
+        <div class="container-fluid p-4" style="margin-bottom: 38px;">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 mb-4 mb-md-0 text-center" style="padding-top:20px ;">
+                    <h3 class="text-uppercase" style="font-size: 19px;">حمل تطبيق عصير الكتب</h3>
+                    <div> <a href="#"><img src="Google-Play-Icon.png" style="width: 110px;height: 55px;"></a>
+                        <a href="#"> <img src="apple.png" style="width: 105px;height: 38px;"></a>
+                    </div>
+                    <div> <a href="#"><img src="607605-middle.png"
+                                style="width: 60px;height: 20px;border-radius: 10px;"></a>
+                        <a href="#"> <img src="master.jpg" style="width: 40px;height: 30px;"></a>
+                        <a href="#"> <img src="visa-512.webp" style="width: 60px;height: 40px;"></a>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-end">
+                    <h5 class="text-uppercase">الدعم</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text">اتصل بنا</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text">خدمة العملاء</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text">اماكن تواجدنا</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 text-end">
+                    <h6 class="text-uppercase mb-0 ">روابط سريعة</h6>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text">شروط واحكام الاستخدام</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text">سياسة الخصوصية</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text">سياسة الارجاع والاسترداد</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text">كتبنا على جوجل بلاي</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text">كتبنا على امازون</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr style="margin: 0 30px;">
+
+        <div class="text-start p-3 " style="display:inline;color: rgb(160, 159, 159);">
+            <a href="#" class="text1"> <i class="fa-solid fa-paper-plane"
+                    style="padding: 0 18px;margin-top: 20px;"></i></a>
+            <a href="#" class="text1"> <i class="fa-brands fa-youtube" style="padding: 0 18px;margin-top: 20px;"></i></a>
+            <a href="#" class="text1"> <i class="fa-brands fa-twitter" style="padding: 0 18px;margin-top: 20px;"></i></a>
+            <a href="#" class="text1"> <i class="fa-brands fa-instagram"
+                    style="padding: 0 18px;margin-top: 20px;"></i></a>
+            <a href="#" class="text1"> <i class="fa-brands fa-facebook"
+                    style="padding: 0 18px;margin-top: 20px;"></i></a>
+        </div>
+        <div class="text-end " style="display:inline;">
+            <p class="text-end" style="font-size:13px;color: rgb(207, 206, 206);">muhammad mohsen جميع الحقوق محفوظة
+                لعصير الكتب 2014-2022-بواسطة </p>
+        </div>
+
+    </footer>
+
+
+ 
+    <button type="button" class="btn " data-bs-toggle="tooltip" data-bs-placement="bottom"
+        data-bs-title="Tooltip on bottom" style="position: fixed; bottom: 20px; left: 20px;width: 35px;border: none;"> 
+    <img src="https://cdn.aseeralkotb.com/images/icons/fb-messenger-logo.svg" width="56" height="56" alt="خدمة العملاء"></button>
+
+
+
+</body>
+
+</html>
